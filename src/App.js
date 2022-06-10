@@ -1,9 +1,14 @@
 import './App.css';
 import React from 'react';
-import { Header } from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 
 function App() {
-  return <Header/>
-}
+
+  return( <>
+      <Navbar/> 
+      <ItemListContainer/>
+    </>
+)}
 
 export default App;

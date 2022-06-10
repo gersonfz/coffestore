@@ -4,6 +4,8 @@ export const Container = styled.nav`
     width: 100%;
     background-color: #a46c4c;
     height: 75px;
+    position: sticky;
+    top: 0;
 `
 
 export const Wrapped = styled.div`
@@ -22,12 +24,21 @@ export const LogoContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
     a{
         font-family: 'Dancing Script', cursive;
         text-decoration: none;
         color: black;
+        font-size: 3.5rem;
+        flex-wrap: nowrap;
+    @media screen and (max-width: 960px) and (min-width: 480px){
+        font-size: 2.5rem;
+    }
+    @media screen and (max-width: 479px){
+        font-size: 2rem;
+    }
+        
+
     }
     
 
@@ -38,6 +49,7 @@ export const LogoContainer = styled.div`
 export const ContainerMenu = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 75px;
 
 `
