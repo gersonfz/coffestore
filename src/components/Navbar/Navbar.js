@@ -1,63 +1,62 @@
-import React, { useState } from "react"
-import { Container, Wrapped, LogoContainer, Menu, MenuItem, BurgerMenu, ContainerMenu } from "./Navbar.elements"
-import { GiCoffeeBeans, GiShoppingCart } from "react-icons/gi"
+import React from "react"
+import { GiCoffeeBeans } from "react-icons/gi"
 import { VscMenu } from "react-icons/vsc"
 import { IconContext } from "react-icons"
-
+import { IconCarShopping } from "./CartWidget"
+import styles from "./Navbar.module.css"
 
 
 export const Navbar = () => {
-	const [showBurgerMenu, setShowBurgerMenu] = useState(false)
 	return (
-			 <Container>
+			 <nav className={styles.nav}>
 
-			<Wrapped>
+			<div >
 
 				<IconContext.Provider value={{ style: { fontSize: "2.5em", color: "#5b341c" } }}>
 
-					<LogoContainer>
+					<div >
 						<GiCoffeeBeans />
 						<h1><a href="/">Coffee Beans</a></h1>
-					</LogoContainer>
+					</div>
 
-					<ContainerMenu>
-						<GiShoppingCart/>
+					<div>
+						<IconCarShopping/>
 						
-						<BurgerMenu onClick={() => setShowBurgerMenu(!showBurgerMenu)}>
+						<div className={styles.BurgerMenu}>
 							<VscMenu />
-						</BurgerMenu>
-
-						<Menu open={showBurgerMenu}>
-							<MenuItem>
+						</div>
+						<ul className={styles.listaStyle}>
+							<li>
 								<a href="/">
 									Home
 								</a>
-							</MenuItem>
-							<MenuItem>
+							</li>
+							<li>
 								<a href="/">
 									Productos
 								</a>
-							</MenuItem>
-							<MenuItem>
+							</li>
+							<li>
 								<a href="/">
 									Contacto
 								</a>
-							</MenuItem>
-							<MenuItem>
+							</li>
+							<li>
 								<a href="/">
 									FAQs
 								</a>
-							</MenuItem>
+							</li>
 
-						</Menu>
+						</ul>
 
-					</ContainerMenu>
+					</div>
 
 				</IconContext.Provider>
-			</Wrapped>
+			</div>
 
-		</Container>
+		</nav>
+
 )};
 
 export default Navbar
-
+ 

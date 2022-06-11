@@ -1,0 +1,31 @@
+section{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 35px;
+    text-align: center;
+    font-size: 1.5rem;
+    color:black;
+
+    
+}
+
+.cardsProducts{
+    display: flex;
+    justify-content: space-around;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:15px;
+    animation-name: loading;
+    animation-duration: 2s;
+    color: black;
+}
+@keyframes loading{
+    0%{opacity: 0;}
+    25%{opacity: 100;}
+    50%{opacity: 0;}
+    75%{opacity: 100;}
+    100% {opacity: 0;}
+}

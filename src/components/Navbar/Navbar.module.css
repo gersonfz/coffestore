@@ -1,0 +1,138 @@
+
+nav{
+    width: 100%;
+    background-color: #a46c4c;
+    height: 75px;
+    position: sticky;
+    top: 0;
+}
+
+nav > div{
+width: 100%;
+max-width: 1400px;
+height: 100%;
+display: flex;
+flex-wrap: nowrap;
+align-items: center;
+justify-content: space-between;
+margin: auto;
+}
+
+
+nav > div > div{
+
+margin-left: 0.5rem;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+nav > div > div a{
+    font-family: 'Dancing Script', cursive;
+    text-decoration: none;
+    color: black;
+    font-size: 3.5rem;
+    flex-wrap: nowrap;
+}
+    
+nav > div > div > div{
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 75px;
+}
+
+
+.listaStyle{
+
+height: 75px;
+display: flex;
+flex-wrap: nowrap;
+list-style: none;
+right: 0;
+}
+
+
+
+
+
+
+    .listaStyle li{
+height: 100%;
+}
+
+.listaStyle li > a{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+padding: 0.5rem 1rem;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1rem;
+font-weight: 300;
+cursor: pointer;
+transition: 0.5s all ease;
+text-decoration: none;
+}
+.listaStyle li > a:hover{
+    background-color: #d4b5a4;
+    transition: 0.5s all ease;
+    color: #a46c4c;
+}
+
+.BurgerMenu {
+display: none;
+}
+@media screen and (max-width: 960px){
+nav > div > div > a{
+    font-size: 2.5rem;
+}
+
+/* MediaQueries de Lista del Nav */
+.listaStyle {
+    position: absolute;
+    top: 75px;
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s all ease;
+    background-color: #a46c4c;
+
+    border-radius: 0 0 0 70%;
+}
+
+.listaStyle li{
+
+    width: 100%;
+    height: 75px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listaStyle li a{
+    width: 100%;
+}
+.listaStyle li a:hover{
+        width: 50%;
+    }
+/* MediaQueries de BurgerMenu */
+.BurgerMenu{
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+svg{
+    margin: 0.5rem;
+}
+}
+
+@media screen and (max-width: 479px){
+    nav > div > div > a {
+        font-size: 2rem;
+    }
+}
