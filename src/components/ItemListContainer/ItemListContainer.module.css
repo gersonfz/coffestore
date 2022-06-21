@@ -4,13 +4,16 @@ section{
     text-align: center;
     font-size: 1.5rem;
     color:black;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
 }
 
 .cardsProducts{
     display: flex;
     justify-content: space-around;
+    flex-flow: wrap;
 }
 
 .loading {
@@ -29,3 +32,4 @@ section{
     75%{opacity: 100;}
     100% {opacity: 0;}
 }
+

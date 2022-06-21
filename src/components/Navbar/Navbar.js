@@ -1,12 +1,17 @@
 import React from "react"
 import { GiCoffeeBeans } from "react-icons/gi"
-import { VscMenu } from "react-icons/vsc"
 import { IconContext } from "react-icons"
 import { IconCarShopping } from "./CartWidget"
 import styles from "./Navbar.module.css"
+import NavbarDesktop from "./NavbarDesktop"
+import NavbarMobile from "./NavbarMobile"
+
 
 
 export const Navbar = () => {
+
+
+
 	return (
 			 <nav className={styles.nav}>
 
@@ -21,33 +26,8 @@ export const Navbar = () => {
 
 					<div>
 						<IconCarShopping/>
-						
-						<div className={styles.BurgerMenu}>
-							<VscMenu />
-						</div>
-						<ul className={styles.listaStyle}>
-							<li>
-								<a href="/">
-									Home
-								</a>
-							</li>
-							<li>
-								<a href="/">
-									Productos
-								</a>
-							</li>
-							<li>
-								<a href="/">
-									Contacto
-								</a>
-							</li>
-							<li>
-								<a href="/">
-									FAQs
-								</a>
-							</li>
-
-						</ul>
+						<NavbarDesktop />
+						<NavbarMobile />
 
 					</div>
 

@@ -4,12 +4,14 @@ import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 
+
 function App() {
 
   return( <>
       <Navbar/> 
-        <ItemListContainer greeting={'Venta de granos de cafe de todo el mundo'}>
+        <ItemListContainer greeting={'Venta de cafe de todo el mundo'}>
           </ItemListContainer>
+
     </>
 )}
 
