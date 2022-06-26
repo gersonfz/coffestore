@@ -6,9 +6,9 @@ const Error404 = () =>{
     return(
         <section className={styles.error404}>
 
-            <h1>Error 404</h1>
+            <h2>Error 404</h2>
             <p>Not Found</p>
-                <span><Link to="/">Ir a home</Link></span>
+            <Link to="/">Ir a home</Link>
         </section>       
     )
 }

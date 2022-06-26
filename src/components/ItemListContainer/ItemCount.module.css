@@ -1,15 +1,18 @@
 .itemCount{
+    
     border: 1px;
     margin: 10px;
     color: white;
+    text-align: center;
+    
 }
 
-span{
+.itemCount span{
     width: 6rem;
     height: 2.5rem;
     font-size: 2rem;
     border-radius: 5px;
-    margin: 0 35px;
+    margin: 5px 35px;
 }
 
 
@@ -22,6 +25,7 @@ span{
     background-color: white;
     border-color: red;
     cursor: pointer;
+    margin: 5px;
 
 }
 .button1:hover{
@@ -55,18 +59,13 @@ span{
     font-size: 1rem;
     border-radius: 5px;
     background-color: white;
-    border-color: green;
+    border-color:#5b341c;
     cursor: pointer;
 
 }
 .buttonCompra:hover{
-    background-color: green;
+    background-color:#5b341c;
     border-color: white;
     transition: 0.3s all ease;
     color: white;
-}
-
-img{
-    width: 500px;
-    height: 500px;
 }

@@ -10,22 +10,12 @@ export const ItemListContainer = ({greeting = 'Titulo no definido'}) => {
     const [prod, setProd] = useState ([])
     const {id} = useParams()
 
-    if(id === undefined){
         useEffect(() => {
             MyPromise(2000, Products)
             .then(
-                (res)=>setProd(res)
-            )
-        }, [prod])
-    }else{
-        useEffect(() => {
-            MyPromise(0, Products)
-            .then(
-                (res)=>setProd(res.filter(el => el.category === parseFloat(id))),
-                console.log(id)
-            )
-        }, [id])
-    }
+                (res)=>{id === undefined ? setProd(res) : setProd(res.filter(el => el.category === parseFloat(id)))}
+            )},[id])
+    
     
     return (
         <section className={styles.section}>
@@ -34,7 +24,7 @@ export const ItemListContainer = ({greeting = 'Titulo no definido'}) => {
             {   
                 prod.length > 0 ? <><ItemList item={prod}/></> : <div><h2 className={styles.loading}>Cargando...</h2></div> 
             }
-            {console.log(prod)}
+            {console.log(id)}
             </div>
         </section>      
 )}

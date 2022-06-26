@@ -14,9 +14,9 @@ const NavLinks = () =>{
         <li className={styles.product}>
                 Producto
                 <ul className={styles.subMenu}>
-                    <li><NavLink className={styles.subProduct} to={`/category/${1}`}>Extra fuerte</NavLink></li>
-					<li><NavLink className={styles.subProduct} to={`/category/${2}`}>Alta</NavLink></li>
-					<li><NavLink className={styles.subProduct} to={`/category/${3}`}>Media</NavLink></li>
+                    <li><NavLink className={styles.subProduct} to={"/category/1"}>Extra fuerte</NavLink></li>
+					<li><NavLink className={styles.subProduct} to={"/category/2"}>Alta</NavLink></li>
+					<li><NavLink className={styles.subProduct} to={"/category/3"}>Media</NavLink></li>
                 </ul>
         </li>
         <li>

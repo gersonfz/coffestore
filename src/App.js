@@ -8,6 +8,7 @@ import Details from './pages/Details'
 import Contact from './pages/Contact';
 import FAQs from './pages/FAQs';
 import Category from './pages/Category';
+import Cart from './pages/Cart';
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
         <Route path='/category/:id' element={<Category/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/faqs' element={<FAQs/>} />
-        <Route path={`/details/:id`} element={<Details />} />
+        <Route path='/details/:id' element={<Details />} />
+        <Route path='/cart' element={<Cart />} />
         <Route path='*' element={<Error404/>} />
       </Routes>
     </BrowserRouter>
