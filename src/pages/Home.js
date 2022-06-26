@@ -3,7 +3,7 @@ import ItemListContainer from '../components/ItemListContainer/ItemListContainer
 
 const Home = () =>{
     return(
-        <ItemListContainer greeting={'Venta de cafe de todo el mundo'} k/>
+        <ItemListContainer greeting={'Venta de cafe de todo el mundo'} />
     )
 }
 

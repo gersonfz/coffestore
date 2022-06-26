@@ -7,7 +7,7 @@ import Error404 from './pages/Error404';
 import Details from './pages/Details'
 import Contact from './pages/Contact';
 import FAQs from './pages/FAQs';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Category from './pages/Category';
 
 
 function App() {
@@ -18,10 +18,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home/>} />
+        <Route path='/category/:id' element={<Category/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/faqs' element={<FAQs/>} />
         <Route path={`/details/:id`} element={<Details />} />
-        <Route path={`/category/:id`} elements = {<ItemListContainer />} />
         <Route path='*' element={<Error404/>} />
       </Routes>
     </BrowserRouter>

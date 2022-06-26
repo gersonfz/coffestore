@@ -8,17 +8,15 @@ import ItemDetails from "./ItemDetails";
 
 const ItemDetailContainer = () =>{
     const [detail, setDetail] = useState()
-    const [getItem, setGetItem] = useState([])
     const { id } = useParams([])
     
 
       useEffect(() => {
         MyPromise(2000, Products)
         .then(
-            (res) => setGetItem(res),
-            setDetail(getItem.find(el => el.id === parseFloat(id))),
+            (res) => setDetail(res.find(el => el.id === parseFloat(id)))
         )
-        },[getItem])
+        },[detail])
 
     return (
         <section>

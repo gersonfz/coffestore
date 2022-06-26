@@ -5,9 +5,9 @@ import NavLinks from "./NavLinks";
 
 const NavbarDesktop = () =>{
     return(
-        <div className={styles.NavbarDesktop}>
+        <nav className={styles.NavbarDesktop}>
             <NavLinks/>
-        </div>
+        </nav>
     )
 }
 

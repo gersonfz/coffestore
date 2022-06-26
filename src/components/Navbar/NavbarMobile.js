@@ -9,12 +9,12 @@ const NavbarMobile = () =>{
     const [open, setOpen] = useState(false)
 
     return(
-    <div className={styles.NavbarMobile}>
+    <nav className={styles.NavbarMobile}>
 		<VscMenu className={styles.BurgerMenu} onClick={() =>{
             setOpen(!open)
         }} />
         {open && <NavLinks/>}
-    </div>
+    </nav>
     )
 }
 

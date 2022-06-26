@@ -1,9 +1,9 @@
 import React from 'react'
 import Item from './Item'
 
-export const ItemList = ({Products}) => {
+export const ItemList = ({item}) => {
   return (
-    Products.map(p => 
+    item.map(p => 
         <Item
             key={p.id}
             {...p}

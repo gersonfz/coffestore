@@ -3,7 +3,7 @@ const Products = [
     {
         id: 1,
         name: 'Cafe Italiano',
-        catid: 1,
+        category: 1,
         price: 1200,
         stock: 10,
         image: 'https://sc04.alicdn.com/kf/Uae4146ac97bb4afc92c50308b084adc7L.png',
@@ -18,7 +18,7 @@ const Products = [
     {
         id: 2,
         name: 'Cafe Turco',
-        catid: 2,
+        category: 3,
         price: 1500,
         stock: 0,
         image: 'https://sc04.alicdn.com/kf/U3c2db45b6cc9486a8c9835b7b856959b4.png',
@@ -33,7 +33,7 @@ const Products = [
     {
         id: 3,
         name: 'Cafe arabico',
-        catid: 3,
+        category: 2,
         price: 950,
         stock: 20,
         image: 'https://sc04.alicdn.com/kf/A2169661932ee42559f8a9de56a60e1c0O.jpg',
@@ -48,7 +48,7 @@ const Products = [
     {
         id: 4,
         name: 'Cafe venezolano',
-        catid: 2,
+        category: 3,
         price: 950,
         stock: 20,
         image: 'https://dpapagayo.com/wp-content/uploads/2021/04/CAFE-FAMA-DE-AMERICA-250-G.jpg',
@@ -63,7 +63,7 @@ const Products = [
     {
         id: 5,
         name: 'Cafe colombiano',
-        catid: 3,
+        category: 2,
         price: 950,
         stock: 20,
         image: 'https://cdn.shopify.com/s/files/1/0600/3654/6804/products/IMG_1944.jpg?v=1646579689',
@@ -78,7 +78,7 @@ const Products = [
     {
         id: 6,
         name: 'Cafe Kopi Luwak',
-        catid: 1,
+        category: 1,
         price: 950,
         stock: 20,
         image: 'https://m.media-amazon.com/images/I/91zDc30d+2L._SX466_.jpg',
@@ -93,7 +93,7 @@ const Products = [
     {
         id: 7,
         name: 'Cafe argentino',
-        catid: 2,
+        category: 3,
         price: 950,
         stock: 20,
         image: 'https://jumboargentina.vtexassets.com/arquivos/ids/646155/Caf-La-Morenita-Molido-125gr-1-871460.jpg?v=637582880093100000',

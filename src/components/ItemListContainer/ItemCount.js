@@ -30,7 +30,7 @@ export const ItemCount = ({ stock}) => {
 
 
 
-    return <div className={styles.div}>
+    return <div className={styles.itemCount}>
         <button disabled={stock === 0} onClick={(sub)} className={styles.button1}>-</button>
         <span>{count}</span>
         <button disabled={stock === 0} onClick={(add)} className={styles.button2}>+</button>

@@ -33,3 +33,20 @@ article{
     padding: 5px;
     border-radius: 5px;
   }
+
+  .buttonDetail{
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: white;
+    border-color: rgb(128, 0, 0);
+    cursor: pointer;
+
+}
+.buttonDetail:hover{
+    background-color: rgb(128, 0, 0);
+    border-color: white;
+    transition: 0.3s all ease;
+    color: white;
+}

@@ -3,7 +3,6 @@ import ItemCount from "./ItemCount";
 import styles from './Item.module.css'
 
 export const ItemDetails = ({ item }) => {
-console.log(item)
   return (
     <article>
       <div className={styles.card}>
