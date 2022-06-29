@@ -1,7 +1,7 @@
 import React from "react"
 import { GiCoffeeBeans } from "react-icons/gi"
 import { IconContext } from "react-icons"
-import { IconCarShopping } from "./CartWidget"
+import CartWidget from "./CartWidget"
 import styles from "./Navbar.module.css"
 import NavbarDesktop from "./NavbarDesktop"
 import NavbarMobile from "./NavbarMobile"
@@ -16,7 +16,7 @@ export const Navbar = () => {
 						<h1><a href="/">Coffee Beans</a></h1>
 					</div>
 					<div className={styles.menu}>
-						<IconCarShopping/>
+						<CartWidget />
 						<NavbarDesktop />
 						<NavbarMobile />
 					</div>

@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { CartContext } from "../../cartcontext/CartContext";
 import ItemCount from "./ItemCount";
 import styles from './ItemDetails.module.css'
 
 
-export const ItemDetails = ({item}) => {
+export const ItemDetails = ({item, count}) => {
   const [add, setAdd] = useState(false)
-  const onAdd = () =>{
-    setAdd(!add)
-  }
+
+  const {addItem} = useContext(CartContext)
   
   return (
     <section className={styles.sectionDetails}>
@@ -17,7 +17,7 @@ export const ItemDetails = ({item}) => {
           <img src={item.image} alt="Grano de cafe" />
           <div className={styles.card}>
           {
-            !add ? <ItemCount stock={item.stock} initial={1} onAdd={onAdd} /> : <h3>Añadido al carrito</h3>
+            !add ? <ItemCount item={item} stock={item.stock} initial={1} addItem={addItem} count={count} /> : <h3>Añadido al carrito</h3>
           }
           <NavLink className={styles.buttonFinish} to={'/cart'}>Terminar mi compra</NavLink>
         </div>

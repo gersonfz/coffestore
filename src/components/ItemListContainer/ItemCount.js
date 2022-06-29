@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from './ItemCount.module.css'
 
-export const ItemCount = ({ stock, initial, onAdd }) => {
+export const ItemCount = ({item, stock, initial, addItem }) => {
     const [count, setCount] = useState(initial)
 
 
@@ -22,7 +22,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
             <button disabled={stock === 0} onClick={(sub)} className={styles.button1}>-</button>
             <span>{count}</span>
             <button disabled={stock === 0} onClick={(add)} className={styles.button2}>+</button>
-            <button disabled={stock === 0} onClick={()=>onAdd()} className={styles.buttonCompra}>Comprar</button>
+            <button disabled={stock === 0} onClick={()=>addItem(item, count)} className={styles.buttonCompra}>Comprar</button>
         </div>
     )
 }

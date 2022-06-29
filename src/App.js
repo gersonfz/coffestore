@@ -9,12 +9,14 @@ import Contact from './pages/Contact';
 import FAQs from './pages/FAQs';
 import Category from './pages/Category';
 import Cart from './pages/Cart';
+import { CartProvider } from './cartcontext/CartContext';
 
 
 function App() {
 
   return (
-    
+    <>
+    <CartProvider>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -27,6 +29,8 @@ function App() {
         <Route path='*' element={<Error404/>} />
       </Routes>
     </BrowserRouter>
+    </CartProvider>
+    </>
   )
 }
 
