@@ -1,26 +1,24 @@
 import React from "react"
 import { GiCoffeeBeans } from "react-icons/gi"
-import { IconContext } from "react-icons"
 import CartWidget from "./CartWidget"
 import styles from "./Navbar.module.css"
 import NavbarDesktop from "./NavbarDesktop"
 import NavbarMobile from "./NavbarMobile"
+import { Link } from "react-router-dom"
 
 export const Navbar = () => {
 	return (<>
 			<header className={styles.header}>
 			<div className={styles.wrapped}>
-				<IconContext.Provider value={{ style: { fontSize: "2.5em", color: "#5b341c" } }}>
-					<div>
+					<div className={styles.logo}>
 						<GiCoffeeBeans />
-						<h1><a href="/">Coffee Beans</a></h1>
+						<h1><Link to="/">Coffee Beans</Link></h1>
 					</div>
 					<div className={styles.menu}>
 						<CartWidget />
 						<NavbarDesktop />
 						<NavbarMobile />
 					</div>
-				</IconContext.Provider>
 			</div>
 		</header>
 	</>

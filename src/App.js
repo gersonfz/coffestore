@@ -16,20 +16,20 @@ function App() {
 
   return (
     <>
-    <CartProvider>
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/category/:id' element={<Category/>} />
-        <Route path='/contact' element={<Contact/>} />
-        <Route path='/faqs' element={<FAQs/>} />
-        <Route path='/details/:id' element={<Details />} />
-        <Route path='/cart' element={<Cart />} />
-        <Route path='*' element={<Error404/>} />
-      </Routes>
-    </BrowserRouter>
-    </CartProvider>
+      <CartProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/category/:id' element={<Category />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/faqs' element={<FAQs />} />
+            <Route path='/details/:id' element={<Details />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='*' element={<Error404 />} />
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
     </>
   )
 }

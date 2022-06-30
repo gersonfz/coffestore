@@ -5,8 +5,8 @@ import ItemCount from "./ItemCount";
 import styles from './ItemDetails.module.css'
 
 
-export const ItemDetails = ({item, count}) => {
-  const [add, setAdd] = useState(false)
+export const ItemDetails = ({item}) => {
+  const [add] = useState(false)
 
   const {addItem} = useContext(CartContext)
   
@@ -17,7 +17,7 @@ export const ItemDetails = ({item, count}) => {
           <img src={item.image} alt="Grano de cafe" />
           <div className={styles.card}>
           {
-            !add ? <ItemCount item={item} stock={item.stock} initial={1} addItem={addItem} count={count} /> : <h3>Añadido al carrito</h3>
+            !add ? <ItemCount item={item} stock={item.stock} initial={1} addItem={addItem} /> : <h3>Añadido al carrito</h3>
           }
           <NavLink className={styles.buttonFinish} to={'/cart'}>Terminar mi compra</NavLink>
         </div>

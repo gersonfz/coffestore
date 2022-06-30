@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { CartContext } from '../cartcontext/CartContext'
 
 const Cart = () => {
-    const { itemCart } = useContext(CartContext)
+    const { itemCart, clear, removeItem } = useContext(CartContext)
 
     return (
         <section>
@@ -14,9 +14,12 @@ const Cart = () => {
                             {el.price} - 
                             {el.count}
                         </p>
+                        <button onClick={() => removeItem(el.id)}> Remover unidad</button>
+
                     </div>
                 ))
             }
+            <button onClick={clear}>Clear</button>
         </section>
 
     )
