@@ -6,3 +6,63 @@ h2{
     font-size: 2.5rem;
     margin-top: 3rem;
 }
+
+.sectionCart{
+    display: flex;
+    align-items: center;
+}
+
+.sectionCart > article{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 15px;
+    padding: 0 15px;
+}
+
+.sectionCart div button{
+    margin: 0 15px;
+}
+
+.buttonClear{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: white;
+    border-color:red;
+    transition: 0.3s all ease;
+    cursor: pointer;
+}
+.buttonClear p{
+    margin: 6px;
+}
+.buttonClear:hover{
+    background-color: red;
+    border-color: white;
+    transition: 0.3s all ease;
+    color: white;
+}
+
+.buttonRemove{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: white;
+    border-color:red;
+    transition: 0.3s all ease;
+    cursor: pointer;
+}
+.buttonRemove:hover{
+    background-color: red;
+    border-color: white;
+    transition: 0.3s all ease;
+    color: white;
+}

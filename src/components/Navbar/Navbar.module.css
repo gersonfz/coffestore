@@ -9,6 +9,19 @@ header{
     color: #5b341c;
 
 }
+.cartWidget{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cartWidget p{
+    background-color: #d4b5a4;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0 5px;
+    border-radius:100%;
+    margin-right: 10px;
+}
+
 
 .wrapped{
 width: 100%;
@@ -63,7 +76,6 @@ height: 75px;
 display: flex;
 align-items: center;
 list-style: none;
-padding-right: 25px;
 }
 .menu a{
     color: #5b341c;
@@ -148,6 +160,12 @@ display: none;
 .wrapped a{
     font-size: 2rem;
 }
+.BurgerMenu{
+    font-size: 1.7rem;
+    right: 0;
+    margin-right: 35px;
+
+}
 
 /* MediaQueries de Lista del Nav */
 .NavbarMobile ul{
@@ -167,6 +185,7 @@ display: none;
     animation-duration: 1.5s;
     animation-delay: 0s;
 }
+
 
 @keyframes navbar{
     from{
@@ -188,6 +207,12 @@ display: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    bottom: 0;
+
+}
+.product{
+    color: white;
+
 }
 
 .product .subMenu{
@@ -196,42 +221,45 @@ display: none;
 }
 ul li:hover .subMenu{
     background-color:  #a46c4c;
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     color:black;
     width: 100%;
-    top: -50px;
+    top: -6rem;
+    height: fit-content;
     
 }
 
 .NavbarMobile a{
     width: 100%;
     display: flex;
-justify-content: center;
-align-items: center;
-height: 100%;
-padding: 0.5rem 1rem;
-color: white;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 1rem;
-font-weight: 300;
-cursor: pointer;
-transition: 0.5s all ease;
-text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.5s all ease;
+    text-decoration: none;
 }
-.NavbarMobile ul li a:hover{
-        width: 50%;
-            background-color: #d4b5a4;
-            transition: 0.5s all ease;
-            color: #a46c4c;
-        }
+.NavbarMobile ul li:hover{
+    width: 25%;
+    background-color: #d4b5a4;
+    transition: 0.5s all ease;
+    color: #a46c4c;
+}
     
+
 /* MediaQueries de BurgerMenu */
 .BurgerMenu{
-display: flex;
-justify-content: flex-end;
-align-items: center;
-cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
 }
 svg{
     height: 2.5rem;
@@ -241,6 +269,7 @@ svg{
 
 @media screen and (max-width: 479px){
     nav > div > div > a {
-        font-size: 2rem;
+        font-size: 2rem ;
     }
+
 }

@@ -69,3 +69,14 @@
     transition: 0.3s all ease;
     color: white;
 }
+
+div .buttonCompra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div .buttonCompra p{
+    font-size: 1.6rem;
+}

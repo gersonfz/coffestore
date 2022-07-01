@@ -25,8 +25,9 @@ export const ItemCount = ({item, stock, initial, addItem}) => {
             <button disabled={stock === 0} onClick={(sub)} className={styles.button1}>-</button>
             <span>{count}</span>
             <button disabled={stock === 0} onClick={(add)} className={styles.button2}>+</button>
-            <button disabled={stock === 0} onClick={()=>addItem(item, count)} className={styles.buttonCompra}><GiShoppingCart/>Comprar</button>
-
+            <div>
+                <button disabled={stock === 0} onClick={()=>addItem(item, count)} className={styles.buttonCompra}><p><GiShoppingCart/></p>Agregar al carrito</button>
+            </div>
         </div>
     )
 }
