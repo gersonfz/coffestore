@@ -6,9 +6,12 @@ import styles from './ItemDetails.module.css'
 
 
 export const ItemDetails = ({item}) => {
-  const [add] = useState(false)
-
+  const [add, setAdd] = useState((0))
   const {addItem} = useContext(CartContext)
+  const onAdd = (qty) =>{
+    setAdd(qty)
+    addItem(item, qty)
+  }
   
   return (
     <section className={styles.sectionDetails}>
@@ -17,9 +20,14 @@ export const ItemDetails = ({item}) => {
           <img src={item.image} alt="Grano de cafe" />
           <div className={styles.card}>
           {
-            !add ? <ItemCount item={item} stock={item.stock} initial={1} addItem={addItem} /> : <h3>Añadido al carrito</h3>
+            add > 0 
+            ? 
+            <div>
+              <NavLink className={styles.buttonFinish} to={'/cart'}>Terminar mi compra</NavLink>
+              <NavLink className={styles.buttonFinish} to={'/'}>Seguir Comprando</NavLink>              
+            </div>
+            : <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
           }
-          <NavLink className={styles.buttonFinish} to={'/cart'}>Terminar mi compra</NavLink>
         </div>
         </div>
         <div className={styles.containerDetails}>

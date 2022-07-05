@@ -24,7 +24,6 @@ export const ItemListContainer = ({greeting = 'Titulo no definido'}) => {
             {   
                 prod.length > 0 ? <><ItemList item={prod}/></> : <div><h2 className={styles.loading}>Cargando...</h2></div> 
             }
-            {console.log(id)}
             </div>
         </section>      
 )}

@@ -10,20 +10,20 @@ export const CartProvider = ({children}) => {
       return inCart
     }
 
-    const addItem = (item, count) => {
+    const addItem = (item, qty) => {
       isInCart(item.id)
       ?
       setItemCart(itemCart.map(el => {
         if(el.id === item.id){
-          el.count += count
+          el.qty += qty
         }
         return el
       }))
       :
-      setItemCart([...itemCart, {...item, count: count}])
+      setItemCart([...itemCart, {...item, qty: qty}])
     }
 
-    const clear = (item) => {
+    const clear = () => {
       setItemCart([])
     }
 
