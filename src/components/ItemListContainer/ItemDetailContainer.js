@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import {useParams} from "react-router-dom"
-import MyPromise from "../../utils/MyPromise";
-import Products from "../../utils/Products";
 import ItemDetails from "./ItemDetails";
+import { doc, getDoc } from "firebase/firestore";
+import db from "../../firebase/config";
 
 
 
@@ -12,10 +12,12 @@ const ItemDetailContainer = () =>{
     
 
       useEffect(() => {
-        MyPromise(2000, Products)
-        .then(
-            (res) => setDetail(res.find(el => el.id === parseFloat(id)))
-        )
+        const detailRef = doc(db, "Products", id)
+        getDoc(detailRef).then((snapshot) =>{
+            if(snapshot.exists()){
+                setDetail({id: snapshot.id, ...snapshot.data()})
+            }
+        })
         },[detail])
 
     return (

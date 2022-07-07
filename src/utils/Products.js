@@ -2,7 +2,7 @@
 const Products = [
     {
         id: 1,
-        name: 'Cafe Italiano',
+        name: 'Blend Ulisse',
         category: 1,
         price: 1200,
         stock: 10,
@@ -17,7 +17,7 @@ const Products = [
     },
     {
         id: 2,
-        name: 'Cafe Turco',
+        name: 'Robusta',
         category: 3,
         price: 1500,
         stock: 0,
@@ -32,7 +32,7 @@ const Products = [
     },
     {
         id: 3,
-        name: 'Cafe arabico',
+        name: 'Gam Arab',
         category: 2,
         price: 950,
         stock: 20,
@@ -47,7 +47,7 @@ const Products = [
     },
     {
         id: 4,
-        name: 'Cafe venezolano',
+        name: 'Fama de America',
         category: 3,
         price: 950,
         stock: 20,
@@ -62,11 +62,11 @@ const Products = [
     },
     {
         id: 5,
-        name: 'Cafe colombiano',
+        name: 'Aguila Roja',
         category: 2,
         price: 950,
         stock: 20,
-        image: 'https://cdn.shopify.com/s/files/1/0600/3654/6804/products/IMG_1944.jpg?v=1646579689',
+        image: 'https://grupotubodegon.com/wp-content/uploads/2020/08/Cafe-Aguila-Roja-250g-GTB-scaled.jpg',
         details:{
             type: 'Cafe intenso colombiano',
             intesity: 'Alta',
@@ -77,22 +77,22 @@ const Products = [
     },
     {
         id: 6,
-        name: 'Cafe Kopi Luwak',
+        name: 'Wild Kopi Luwak',
         category: 1,
         price: 950,
         stock: 20,
-        image: 'https://m.media-amazon.com/images/I/91zDc30d+2L._SX466_.jpg',
+        image: 'https://m.media-amazon.com/images/I/81Oaxw+c40L._SL1500_.jpg',
         details:{
             type: 'Cafe Kopi Luwak',
             intesity: 'Extra fuerte',
             origen: 'Indonesio',
             weigth: '500gr',
-            description: 'Café con buen aroma, sabor, cuerpo, acidez y amargor, con un excelente color y textura. Esto se debe a su tipo de tueste, tipo de planta de café y lugar de origen que darán lugar a cada uno de sus atributos organolépticos'
+            description: '  '
         } 
     },
     {
         id: 7,
-        name: 'Cafe argentino',
+        name: 'Morenita',
         category: 3,
         price: 950,
         stock: 20,

@@ -26,7 +26,8 @@ export const ItemDetails = ({item}) => {
               <NavLink className={styles.buttonFinish} to={'/cart'}>Terminar mi compra</NavLink>
               <NavLink className={styles.buttonFinish} to={'/'}>Seguir Comprando</NavLink>              
             </div>
-            : <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
+            :
+            <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
           }
         </div>
         </div>

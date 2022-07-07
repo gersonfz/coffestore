@@ -3,7 +3,7 @@ import styles from './Item.module.css'
 import {Link} from 'react-router-dom'
 
 
-export const Item = ({id, image, name, price, stock}) => {
+export const Item = ({id, image, name, price}) => {
 
   return (<>
     <article className={styles.itemArticle}>
