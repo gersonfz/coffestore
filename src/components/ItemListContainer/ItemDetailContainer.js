@@ -17,7 +17,7 @@ const ItemDetailContainer = () =>{
             if(snapshot.exists()){
                 setDetail({id: snapshot.id, ...snapshot.data()})
             }
-        })
+        }).catch(err => console.log(err))
         },[detail])
 
     return (

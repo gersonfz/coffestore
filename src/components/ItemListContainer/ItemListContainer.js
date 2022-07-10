@@ -23,7 +23,7 @@ export const ItemListContainer = ({greeting = 'Titulo no definido'}) => {
                     setProd(snapshot.docs.map((doc) =>
                         ({id: doc.id, ...doc.data(),})
                         ));
-                });
+                }).catch(err => console.log(err));
             }else{
                 getDocs(q).then((snapshot) =>{
                     if(snapshot.size === 0){
@@ -32,7 +32,7 @@ export const ItemListContainer = ({greeting = 'Titulo no definido'}) => {
                     setProd(snapshot.docs.map((doc) =>
                         ({id: doc.id, ...doc.data(),})
                         ));
-                });
+                }).catch(err => console.log(err));
             }
 
         }, []);

@@ -10,6 +10,7 @@ import FAQs from './pages/FAQs';
 import Category from './pages/Category';
 import Cart from './pages/Cart';
 import { CartProvider } from './cartcontext/CartContext';
+import FinishCart from './pages/FinishCart';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path='/faqs' element={<FAQs />} />
             <Route path='/details/:id' element={<Details />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='/finishcart' element={<FinishCart />} />
             <Route path='*' element={<Error404 />} />
           </Routes>
         </BrowserRouter>

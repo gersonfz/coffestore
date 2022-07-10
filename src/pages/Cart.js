@@ -4,10 +4,10 @@ import { BsFillTrashFill } from "react-icons/bs"
 import styles from "./pages.module.css"
 import { Link } from 'react-router-dom'
 
-const Cart = () => {
-    const { itemCart, clear, removeItem } = useContext(CartContext)
-    const totallyPrice = itemCart.reduce((agg, el) =>  (el.price * el.qty) + agg, 0)
 
+const Cart = () => {
+    const { itemCart, clear, removeItem, totallyPrice } = useContext(CartContext)
+    
     const FulledCart = () =>{
         return(
             <section className={styles.sectionCart}>
@@ -23,6 +23,7 @@ const Cart = () => {
                     <div>
                         <button className={styles.buttonRemove} onClick={() => removeItem(el.id)}> <BsFillTrashFill /></button>
                     </div>
+                    
                 </article>))}
             <div>
                 <p>Precio total: {totallyPrice}</p>
@@ -30,6 +31,13 @@ const Cart = () => {
             <div>
                 <button className={styles.buttonClear} onClick={clear}><p>Clear all</p> <BsFillTrashFill /></button>
             </div>
+            <div>
+            <Link to={'/FinishCart'}>
+                <button>
+                    Finalizar Compra
+                </button>
+            </Link>
+        </div> 
      </section>
         )
     }
@@ -43,11 +51,12 @@ const Cart = () => {
       }
 
 
-    return (<>
-           {
-            itemCart.length ? <FulledCart/> : <EmptyCart/>
-           } 
-    </>
+    return (
+    <section>
+        {
+           itemCart.length ? <FulledCart/> : <EmptyCart/>
+        }
+    </section>
     )
 }
 export default Cart
