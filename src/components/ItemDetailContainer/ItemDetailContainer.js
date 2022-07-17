@@ -3,6 +3,10 @@ import {useParams} from "react-router-dom"
 import ItemDetails from "./ItemDetails";
 import { doc, getDoc } from "firebase/firestore";
 import db from "../../firebase/config";
+import { Spinner } from "react-bootstrap";
+import styles from '../../styles/ItemDetails.module.css'
+
+
 
 
 
@@ -21,9 +25,9 @@ const ItemDetailContainer = () =>{
         },[detail])
 
     return (
-        <section>
-            {detail ?<ItemDetails item={detail}/> : <p>Obteniendo producto...</p> }
-        </section>
+        <main className={styles.detailContainer}>
+            {detail ?<ItemDetails item={detail}/> : <Spinner animation="grow" style={{color: "#5b341c"}}/> }
+        </main>
     )
 }
 

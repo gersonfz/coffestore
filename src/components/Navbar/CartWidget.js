@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { GiShoppingCart } from "react-icons/gi"
 import { Link } from "react-router-dom"
 import { CartContext } from "../../cartcontext/CartContext"
-import styles from "./Navbar.module.css"
+import styles from "../../styles/Navbar.module.css"
 
 const CartWidget = () =>{
     const {itemCart} = useContext(CartContext)
@@ -12,10 +12,11 @@ const CartWidget = () =>{
     ))
 
     return <div className={styles.cartWidget}>
-        <Link to="/cart"><GiShoppingCart/></Link>
-        {
+                {
             cartNumber === 0 ? <></> : <p>{cartNumber}</p>
         }
+        <Link to="/cart"><GiShoppingCart/></Link>
+
     </div>
 }
 

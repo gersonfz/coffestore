@@ -1,18 +1,14 @@
 .itemCount{
-    
     border: 1px;
     margin: 10px;
     color: white;
-    text-align: center;
-    
 }
-
-.itemCount span{
-    width: 6rem;
-    height: 2.5rem;
-    font-size: 2rem;
-    border-radius: 5px;
-    margin: 5px 35px;
+.itemCount > div{
+    display: flex;
+    flex-direction: row;
+}
+.itemCount > div >button{
+    margin: 0.2rem 3rem;
 }
 
 
@@ -23,10 +19,13 @@
     border-radius: 5px;
     transition: 0.3s all ease;
     background-color: white;
+    color: black;
     border-color: red;
     cursor: pointer;
-    margin: 5px;
-
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .button1:hover{
     background-color:red;
@@ -41,9 +40,13 @@
     font-size: 2rem;
     border-radius: 5px;
     background-color: white;
+    color: black;
     border-color:blue;
     transition: 0.3s all ease;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .button2:hover{
@@ -59,8 +62,12 @@
     font-size: 1rem;
     border-radius: 5px;
     background-color: white;
+    color: black;
     border-color:#5b341c;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .buttonCompra:hover{
@@ -76,7 +83,7 @@ div .buttonCompra{
     justify-content: space-evenly;
     align-items: center;
 }
-
-div .buttonCompra p{
-    font-size: 1.6rem;
+svg{
+    font-size: 2rem;
 }
+

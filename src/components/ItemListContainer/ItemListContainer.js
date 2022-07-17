@@ -2,9 +2,10 @@ import React, { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 
 import ItemList from "./ItemList";
-import styles from "./ItemListContainer.module.css";
+import styles from "../../styles/ItemListContainer.module.css";
 import { collection, getDocs, query, where} from "firebase/firestore";
 import db from "../../firebase/config";
+import { Spinner } from "react-bootstrap";
 
 
 export const ItemListContainer = ({greeting = 'Titulo no definido'}) => {
@@ -32,20 +33,22 @@ export const ItemListContainer = ({greeting = 'Titulo no definido'}) => {
                     setProd(snapshot.docs.map((doc) =>
                         ({id: doc.id, ...doc.data(),})
                         ));
-                }).catch(err => console.log(err));
+                }).catch(err => console.log(err))
             }
 
-        }, []);
+        }, [id]);
     
     return (
-        <section className={styles.section}>
-            <h2>{greeting}</h2>
-            <div className={styles.cardsProducts}>
-            {   
-                prod.length > 0 ? <><ItemList item={prod}/></> : <div><h2 className={styles.loading}>Cargando...</h2></div> 
-            }
-            </div>
-        </section>      
+        <main className={styles.mainContainer}>
+            <section>                
+                <h2>{greeting}</h2>
+                <div className={styles.cardsProducts}>
+                {   
+                    prod.length > 0 ? <ItemList item={prod}/> : <Spinner animation="grow" style={{color: "#5b341c"}}/>
+                }
+                </div>
+            </section>
+        </main>      
 )}
 
 export default ItemListContainer;

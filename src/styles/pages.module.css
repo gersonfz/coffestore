@@ -1,4 +1,6 @@
-h2{
+
+
+.pages{
     color: black;
     display: flex;
     justify-content: center;
@@ -7,22 +9,7 @@ h2{
     margin-top: 3rem;
 }
 
-.sectionCart{
-    display: flex;
-    align-items: center;
-}
 
-.sectionCart > article{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin: 15px;
-    padding: 0 15px;
-}
-
-.sectionCart div button{
-    margin: 0 15px;
-}
 
 .buttonClear{
     display: flex;

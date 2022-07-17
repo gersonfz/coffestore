@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Navbar.module.css"
+import styles from "../../styles/Navbar.module.css"
 import NavLinks from "./NavLinks";
 import { VscMenu } from "react-icons/vsc"
 
