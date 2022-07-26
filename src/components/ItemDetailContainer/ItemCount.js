@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { GiShoppingCart } from "react-icons/gi";
-import styles from '../../styles/ItemCount.module.css'
+import styles from './ItemDetailsContainer.module.css'
+import { NavLink } from "react-router-dom";
 
 export const ItemCount = ({stock, initial, onAdd}) => {
     const [count, setCount] = useState(initial)
@@ -17,6 +18,13 @@ export const ItemCount = ({stock, initial, onAdd}) => {
     }
 
     return (
+        stock === 0 
+        ?
+        <div>
+            <h3>Sin stock actualmente!</h3>
+            <NavLink to={'/'} className={styles.buttonCompra}>Ir al inicio</NavLink>
+        </div>
+        :
         <div className={styles.itemCount}>
             <div>
                 <button disabled={stock === 0} onClick={(sub)} className={styles.button1}>-</button>
@@ -29,7 +37,6 @@ export const ItemCount = ({stock, initial, onAdd}) => {
                     Agregar al carrito
                 </button>
             </div>
-
         </div>
     )
 }

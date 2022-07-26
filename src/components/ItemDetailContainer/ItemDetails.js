@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { CartContext } from "../../cartcontext/CartContext";
 import ItemCount from "./ItemCount";
-import styles from '../../styles/ItemDetails.module.css'
+import styles from './ItemDetailsContainer.module.css'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
@@ -27,7 +27,7 @@ export const ItemDetails = ({ item }) => {
                       ?
                       <div className={styles.finishBuy}>
                         <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
-                        <NavLink to={'/cart'}><Button className={styles.buttonFinish}>Terminar mi compra</Button></NavLink>
+                        <NavLink to={'/cart'}><Button className={styles.buttonFinish}>Checkout</Button></NavLink>
                       </div>
                       :
                       <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
