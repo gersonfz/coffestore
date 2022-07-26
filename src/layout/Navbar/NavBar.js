@@ -24,11 +24,11 @@ export const NavBar = () => {
 							<Link to={'/category/Extra fuerte'}>Extra fuerte</Link>
 							<Link to={"/category/Alta"}>Alta</Link>
 							<Link to={"/category/Media"}>Media</Link>
+						</Nav>
+					</Navbar.Collapse>
 							<div className={styles.containerCartWidget}>
 								<CartWidget/> 
 							</div>
-						</Nav>
-					</Navbar.Collapse>
 				</Container>
 			</Navbar>
 		</header>

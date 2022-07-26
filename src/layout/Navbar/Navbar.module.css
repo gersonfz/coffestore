@@ -100,7 +100,6 @@ justify-content: center;
         font-size: 2rem;
     }
     .menu{
-        margin-left: auto;
         text-align: center;
     }
     .menu a{
@@ -108,7 +107,9 @@ justify-content: center;
         right: auto;
     }
     .containerCartWidget{
-        margin-left: auto;
+        position: absolute;
+        top: 12px;
+        right: 22%;
     }
     header button{
         border:none  !important;
