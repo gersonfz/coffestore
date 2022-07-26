@@ -1,15 +1,15 @@
 {
-  "main.css": "/coffestore/static/css/main.ab4e3c2b.chunk.css",
-  "main.js": "/coffestore/static/js/main.6868b50e.chunk.js",
-  "main.js.map": "/coffestore/static/js/main.6868b50e.chunk.js.map",
+  "main.css": "/coffestore/static/css/main.eab94443.chunk.css",
+  "main.js": "/coffestore/static/js/main.f202d4cc.chunk.js",
+  "main.js.map": "/coffestore/static/js/main.f202d4cc.chunk.js.map",
   "static/css/1.8a336e30.chunk.css": "/coffestore/static/css/1.8a336e30.chunk.css",
   "static/js/1.110ea596.chunk.js": "/coffestore/static/js/1.110ea596.chunk.js",
   "static/js/1.110ea596.chunk.js.map": "/coffestore/static/js/1.110ea596.chunk.js.map",
   "runtime~main.js": "/coffestore/static/js/runtime~main.dd269a2c.js",
   "runtime~main.js.map": "/coffestore/static/js/runtime~main.dd269a2c.js.map",
-  "static/css/main.ab4e3c2b.chunk.css.map": "/coffestore/static/css/main.ab4e3c2b.chunk.css.map",
+  "static/css/main.eab94443.chunk.css.map": "/coffestore/static/css/main.eab94443.chunk.css.map",
   "static/css/1.8a336e30.chunk.css.map": "/coffestore/static/css/1.8a336e30.chunk.css.map",
   "index.html": "/coffestore/index.html",
-  "precache-manifest.28a4354fd7ac01ccd8c9fc8ca5cb4f96.js": "/coffestore/precache-manifest.28a4354fd7ac01ccd8c9fc8ca5cb4f96.js",
+  "precache-manifest.6512a3e8899fd4d562654bc3b905d9f2.js": "/coffestore/precache-manifest.6512a3e8899fd4d562654bc3b905d9f2.js",
   "service-worker.js": "/coffestore/service-worker.js"
 }

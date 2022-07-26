@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "6868b50e61f648330fda",
-    "url": "/coffestore/static/css/main.ab4e3c2b.chunk.css"
+    "revision": "f202d4cc4859c746ac53",
+    "url": "/coffestore/static/css/main.eab94443.chunk.css"
   },
   {
-    "revision": "6868b50e61f648330fda",
-    "url": "/coffestore/static/js/main.6868b50e.chunk.js"
+    "revision": "f202d4cc4859c746ac53",
+    "url": "/coffestore/static/js/main.f202d4cc.chunk.js"
   },
   {
     "revision": "110ea596900bbe0114d4",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/coffestore/static/js/runtime~main.dd269a2c.js"
   },
   {
-    "revision": "f81ccbe34a4e9785b8e175a475623710",
+    "revision": "f1b5776eb2df8b3046162f11a57bd025",
     "url": "/coffestore/index.html"
   }
 ];
