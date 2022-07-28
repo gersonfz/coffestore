@@ -15,7 +15,7 @@ const ItemDetailContainer = () =>{
     const { id } = useParams([])
     
 
-      useEffect(() => {
+    useEffect(() => {
         const detailRef = doc(db, "Products", id)
         getDoc(detailRef)
         .then((snapshot) =>{

@@ -10,13 +10,11 @@ import Button from 'react-bootstrap/Button';
 
 export const ItemDetails = ({ item }) => {
   const [add, setAdd] = useState((0))
-  const { addItem, itemCart} = useContext(CartContext)
+  const { addItem} = useContext(CartContext)
   const onAdd = (qty) => {
     setAdd(qty)
     addItem(item, qty)
   }
-  const buyer = itemCart.reduce((agg, el) => agg - (el.qty - el.stock), 1)
-
 
   return (
     <section> 
@@ -27,20 +25,13 @@ export const ItemDetails = ({ item }) => {
                   {
                     add > 0 
                     ?
-                      <div className={styles.finishBuy}>
-                        {
-                          buyer >= 1
-                          ?
-                          <ItemCount buyer={buyer} stock={item.stock} initial={1} onAdd={onAdd} /> 
-                          :
-                          <p>Ya el producto esta en el cart</p>
-                        }
-                        <NavLink to={'/cart'}><Button className={styles.buttonFinish}>Checkout</Button></NavLink>
-                      </div>
-                        :
-                        <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                    <div>
+                      <Button className={styles.buttonFinish}><NavLink to={'/'}>Seguir comprando</NavLink></Button>
+                      <Button className={styles.buttonFinish}><NavLink to={'/cart'}>Checkout</NavLink></Button>
+                    </div>
+                    :
+                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
                   }
-                  
                 </Card.Body>
             </Card>
       </div>

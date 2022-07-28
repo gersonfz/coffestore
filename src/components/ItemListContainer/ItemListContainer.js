@@ -35,7 +35,6 @@ export const ItemListContainer = ({greeting = 'Titulo no definido'}) => {
                     }).catch(err => console.log(err))
         }
     }, [id]);
-    
     return (
         <main className={styles.mainContainer}>
             <section>
