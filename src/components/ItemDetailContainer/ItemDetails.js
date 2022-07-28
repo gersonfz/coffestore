@@ -10,28 +10,37 @@ import Button from 'react-bootstrap/Button';
 
 export const ItemDetails = ({ item }) => {
   const [add, setAdd] = useState((0))
-  const { addItem } = useContext(CartContext)
+  const { addItem, itemCart} = useContext(CartContext)
   const onAdd = (qty) => {
     setAdd(qty)
     addItem(item, qty)
   }
+  const buyer = itemCart.reduce((agg, el) => agg - (el.qty - el.stock), 1)
+
 
   return (
-    <section>
+    <section> 
       <div className={styles.containerCard}>
         <Card className={styles.card}>
               <Card.Img src={item.image} alt='Grano de cafe' />
                 <Card.Body>
                   {
-                    add > 0
-                      ?
+                    add > 0 
+                    ?
                       <div className={styles.finishBuy}>
-                        <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                        {
+                          buyer >= 1
+                          ?
+                          <ItemCount buyer={buyer} stock={item.stock} initial={1} onAdd={onAdd} /> 
+                          :
+                          <p>Ya el producto esta en el cart</p>
+                        }
                         <NavLink to={'/cart'}><Button className={styles.buttonFinish}>Checkout</Button></NavLink>
                       </div>
-                      :
-                      <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                        :
+                        <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
                   }
+                  
                 </Card.Body>
             </Card>
       </div>

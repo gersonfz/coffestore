@@ -3,11 +3,8 @@ export const CartContext = createContext([])
 
 
 export const CartProvider = ({children}) => {
-
-
     const itemCartLocalStorage = JSON.parse(localStorage.getItem('item') || '[]')
     const [itemCart, setItemCart] = useState(itemCartLocalStorage)
-
     useEffect(() =>{
       localStorage.setItem('item', JSON.stringify(itemCart))
     }, [itemCart])
@@ -28,11 +25,10 @@ export const CartProvider = ({children}) => {
       }))
       :
       setItemCart([...itemCart, {...item, qty: qty}])
-
     }
 
     const totallyPrice = itemCart.reduce((agg, el) =>  (el.price * el.qty) + agg, 0)
-
+    
     const clear = () => {
       setItemCart([])
     }

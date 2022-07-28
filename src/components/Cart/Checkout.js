@@ -41,7 +41,6 @@ const Checkout = () => {
         } else if (!regexEmail.test(form.email.trim())) {
             error.email = "El campo 'Email' es incorrecto"
         }
-
         return error
     }
 
@@ -59,7 +58,7 @@ const Checkout = () => {
         const date = new Date();
         const newItem = { ...itemCart }
         const order = {
-            buyer: initialForm,
+            buyer: form,
             items: newItem,
             date: date,
             totallyPrice: totallyPrice
