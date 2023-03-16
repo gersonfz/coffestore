@@ -24,7 +24,7 @@ const ItemDetailContainer = () =>{
             }
         })
         .catch(err => console.log(err))
-        },[detail])
+        },[id])
 
     return (
         <main className={styles.detailContainer}>
